@@ -1,0 +1,99 @@
+~
+https//github.com/benkeyben
+=> git config --global user.name "Benjamin Yankey"
+=> git config --global user.email "ominidroneprime@outlook.com"
+=> git config --global init.defaultBranch main
+=> git config --list
+=> git config user.name
+=> git config user.email
+=> git help <verb>
+=> git <verb> --help
+=> git diff #It doesnt show all changes made since your 
+   last commit -- only changes that are still unstaged.
+=>  git diff --cached / git diff --staged
+=> git commit -a -m 'Add new benchmarks'
+=> git mv file_from file_to # Renaming file in git
+=> git rm --cached README
+=> git commit --amend
+=> git clone https://github.com/benkeyben/bankistApp.git
+=>           https://github.com/username/directoryName
+=>https://github.com/username/directoryName NewDirectoryName
+=> git status -s
+=> https://github.com/github/gitignore i   
+
+=> …or create a new repository on the command line
+    echo "# bankistApp" >> README.md
+    git init
+    git add README.md
+    git commit -m "first commit"
+    git branch -M main
+    git remote add origin https://github.com/benkeyben/bankistApp.git
+    git push -u origin main
+
+=> …or push an existing repository from the command line
+  git remote add origin https://github.com/benkeyben/bankistApp.git
+  git branch -M main
+  git push -u origin main
+
+
+1. You can view all of your settings and where they are 
+   coming from 
+   git config --list --show-origin
+
+2. The first thing is to set your username and email address. You need to do this only once if you pass the --global option, because then Git will always use that inforamtion for anything you do on that system. If you want to override this with a different name or email address for specific projects, you can run the command without the --global option when your'r in that project.
+   git config --global user.name "John Doe"
+   git config --global user.email johndoe@example.com
+
+3. To set main as the default branch name do
+   git config --global init.defaultBranch main
+
+4. If you want to check your configuration settings, you 
+   can use the
+   git config --list
+
+5. Setting upp a .gitignore file for your new repositor before you get going is generally a good idea so you don't accidentally commit files that you really don't  want in your Git repository.
+
+6. As an example, if you commit and then realize you forgot to stage the changes in a file you wanted
+to add to this commit, you can do something like this:
+=> git commit -m 'Initial commit'
+=> git add forgotten_file
+=> git commit --amend
+
+HOW TO ADD A FILE TO .gitignore
+=> echo mylogfile.log >> .gitignore
+=> git rm -r -f --cached mylogfile
+=> git add .
+=> git commit -m "Removed mylogfile"
+
+TO REMOVE A FILE BEFORE push
+=> git rm --cached index.js
+
+REMOVING A FILE ADDED IN THE MOST RECENT UNPUSHED commit
+If the file waws added with your most recent commit and you have not pushed to github, you can delete the file and amend commit
+=> git rm --cached index.js
+=> git commit --amend -HEAD 
+
+To add a new remote Git repository as a shortname you can reference easily, run 
+=> git remote add <shortname> <url>
+=> git remote add bkb https://github.com/benkeyben/bankistApp.git
+
+If you want to see more information about a particular remote, you can use the
+=> git remote show <remote>
+=> git remote show origin
+=> git remote show bkbBankist
+
+TAGGING
+1. To list existing tags
+   => git tag
+
+2. If you're interested only in looking at the 1.8.5 series
+   you can run 
+   => git tag -l "v1.8.5*"
+
+3. Creating annotated tags
+   => git tag -a v1.00 -m "my version 1.00"
+
+4. You can see the tag data along with the commit that
+   was tagged by using the git show command
+   => git show v1.00
+
