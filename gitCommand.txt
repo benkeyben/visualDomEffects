@@ -97,3 +97,14 @@ TAGGING
    was tagged by using the git show command
    => git show v1.00
 
+What is DOM?
+DOM is a complex API that interfaces between JavaScript and browser
+What are the uses of the DOM?
+*   Allows us to make JavaScript interact with the browser.
+
+*   We can write JavaScript to create, modify and delete 
+    HTML elements, set styles, classes and attributes and 
+    listen and respond to events.
+
+*   
+
